@@ -3,16 +3,6 @@ from google.cloud import run_v2
 from google.cloud.run_v2.types import Container
 from google.auth import default
 from google.api_core import exceptions
-from google.cloud.devtools.cloudbuild_v1.services.cloud_build import CloudBuildClient
-from google.cloud.devtools.cloudbuild_v1.types import (
-    BuildTrigger,
-    GitHubEventsConfig,
-    PushFilter,
-    Build,
-    CreateBuildTriggerRequest,
-    Source,
-    RepoSource,
-)
 import subprocess
 import shlex
 
