@@ -1,17 +1,17 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name='peek-cli',
-    version='0.1',
-    py_modules=['cli'],
+    name="peek-cli",
+    version="0.2",
+    py_modules=["cli"],
     install_requires=[
-        'click',
-        'requests',
-        'python-dotenv',
+        "click",
+        "requests",
+        "python-dotenv",
     ],
     entry_points={
-        'console_scripts': [
-            'peek=cli:cli',
+        "console_scripts": [
+            "peek=cli:cli",
         ],
     },
 )

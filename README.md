@@ -95,14 +95,29 @@ python cli.py --help
 1. **Create a Publisher**
 
    ```bash
-   python cli.py create-publisher "Martin Bee" martin@peek.com "https://martin.ext"
+   python cli.py apps publishers create --name "My Publisher" --email "test@example.com" --website-url "https://example.com"
    ```
 
-2. **List Apps**
+2. **Create an App**
+  ```bash
+  python cli.py --api-token PEEK_API_TOKEN apps create --name "My App"
+  ```
+
+3. **List Apps**
    ```bash
-   python cli.py apps-list
+   python cli.py --api-token PEEK_API_TOKEN apps list
    ```
 
+4. **List Extendables**
+  ```bash
+  python cli.py --api-token PEEK_API_TOKEN apps extendables list
+  ```
+  
+
+5. **Add a new Extendable**
+   ```bash
+   python cli.py apps extendables new --name "webhook_on_booking_created@v1" --app-id APP_ID --version VERSION_ID
+   ```
 ---
 
 ## **Development and Packaging**
