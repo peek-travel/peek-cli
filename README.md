@@ -113,11 +113,21 @@ python cli.py --help
   python cli.py --api-token PEEK_API_TOKEN apps extendables list
   ```
   
-
 5. **Add a new Extendable**
    ```bash
    python cli.py apps extendables new --name "webhook_on_booking_created@v1" --app-id APP_ID --version VERSION_ID
    ```
+
+6. **Deploy a service from a prebuilt image**
+   ```bash
+   python cli.py apps services deploy-image --image us-docker.pkg.dev/cloudrun/container/hello --name hello-world --app-id APP_ID
+   ```
+
+7. **Create a service from a GitHub repo and enable autodeploy**
+   ```bash
+  python cli.py apps services create --repository peek-travel/hello-world --app-id APP_ID
+   ```
+
 ---
 
 ## **Development and Packaging**
